@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сравнение — Электро vs Гибрид · Физика Автомобиля</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="block-page">
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="noise"></div>
+
+  <div class="page-bg"><div class="hero-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div></div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-logo">ФизАвто<span>·26</span></div>
+    <span class="nav-single">Сравнение</span>
+  </nav>
+
+  <section class="compare" id="compare">
+    <div class="section-label">/ 03 — Сравнительная таблица</div>
+    <h2 class="section-title">Физика<br/><em>в цифрах</em></h2>
+    <div class="table-controls">
+      <button class="sort-btn active" data-sort="default">По умолчанию</button>
+      <button class="sort-btn" data-sort="range">Запас хода ↕</button>
+      <button class="sort-btn" data-sort="power">Мощность ↕</button>
+    </div>
+    <div class="table-glass">
+      <div class="table-scroll">
+        <table class="compare-table" id="compareTable">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Автомобиль</th>
+              <th>Тип</th>
+              <th>Запас хода</th>
+              <th>Мощность</th>
+              <th>Зарядка / Расход</th>
+              <th>Особенности</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody">
+            <!-- Injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="table-legend">
+      <span class="legend-el">⚡ Электромобиль</span>
+      <span class="legend-hyb">♻ Гибрид</span>
+      <span class="legend-best">🏆 Лучший показатель</span>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">ФизАвто<span>·26</span></div>
+      <p>Учебный проект по физике</p>
+      <p class="footer-author">Автор: Весёлкин Данил Андреевич, 11 Б класс</p>
+      <p class="footer-note">Научный руководитель: Павлова Ольга Владимировна</p>
+      <p class="footer-school">МОУ «Средняя школа № 2 имени Л.П. Семеновой», г. Ярославль · 2026–2027 уч. год</p>
+    </div>
+  </footer>
+
+  <!-- ─── MODAL ─── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-glass" id="modal">
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
